@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Task List</h2>
+
+    <a class="add-btn" href="/add">+ Add Task</a>
+
+    <% if (tasks.length === 0) { %>
+        <p>No tasks available.</p>
+    <% } %>
+
+    <% tasks.forEach(task => { %>
+        <div class="task">
+            <div>
+                <span class="task-title"><%= task.title %></span>
+                <span class="status 
+                    <%= task.status === 'Pending' ? 'pending' :
+                        task.status === 'In Progress' ? 'progress' : 'completed' %>">
+                    (<%= task.status %>)
+                </span>
+            </div>
+
+            <div class="actions">
+                <a href="/view/<%= task._id %>">View</a>
+                <a href="/edit/<%= task._id %>">Edit</a>
+                <a href="/delete/<%= task._id %>">Delete</a>
+            </div>
+        </div>
+    <% }) %>
+
+</div>
+
+</body>
+</html>
