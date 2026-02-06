@@ -27,4 +27,4 @@ Frontend: EJS (Embedded JavaScript templates), Bootstrap
 
 Development Tools: Nodemon for auto-reloading during development
 
-Line Link : https://task-manager-jgo3.onrender.com
+Live Link : https://task-manager-jgo3.onrender.com
